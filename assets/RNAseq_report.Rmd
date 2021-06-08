@@ -432,7 +432,7 @@ Here, volcano plots for all considered contrasts are shown. Hover over the dots 
         geom_vline(xintercept = log_FC_num, size = 0.2, color = "blue") +
         geom_vline(xintercept = -log_FC_num, size = 0.2, color = "blue") +
         scale_y_continuous(limits = c(1, 18)) +
-        scale_x_continuous(limits = c(-5,5), breaks = c(-5:5)) +
+        scale_x_continuous(limits = c(-10,10), breaks = waiver()) +
         facet_wrap(~contrast, ncol=1, scales = "free_x", shrink = FALSE) +
         ylab("-log 10 padj") + xlab("Log2 Fold Change") + theme(legend.position = "none") +
         annotate(geom = "text", x = 4.2, y = 16.2, 
